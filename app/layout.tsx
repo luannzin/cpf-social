@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
+import "@/styles/globals.css";
+
 const roboto = Roboto({
   subsets: ["latin"],
   display: "swap",
@@ -20,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={roboto.className}>
+      <body
+        className={`${roboto.className} w-screen h-screen overflow-x-hidden`}
+      >
         {children}
         <Analytics />
       </body>
