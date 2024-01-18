@@ -14,7 +14,7 @@ import { generateCpf } from "./helpers/generateCpf";
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
 
-  const [cpf, setCpf] = useState("");
+  const [cpf, setCpf] = useState("00000000000");
 
   const copyCpf = () => {
     navigator.clipboard.writeText(cpf);
