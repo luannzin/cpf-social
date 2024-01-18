@@ -1,4 +1,4 @@
-export const generateCpf = () => {
+export const generateCpf: () => string = () => {
   let value = "";
   for (let i = 0; i < 9; i++) {
     value += Math.floor(Math.random() * 10);

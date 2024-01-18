@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import {
   Tooltip,
@@ -15,6 +15,10 @@ export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
 
   const [cpf, setCpf] = useState("00000000000");
+
+  useEffect(() => {
+    setCpf(generateCpf());
+  }, []);
 
   const copyCpf = () => {
     navigator.clipboard.writeText(cpf);

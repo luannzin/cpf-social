@@ -50,7 +50,6 @@ export const CopyAndPaste = ({ isCopied }: { isCopied: boolean }) => {
         className="transition-all duration-300 ease-in-out size-8"
       />
       <Check
-        isVisible={isCopied}
         style={{
           color: "#603500",
           position: "absolute",
