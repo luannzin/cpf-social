@@ -11,6 +11,8 @@ import {
 import { CopyAndPaste } from "./components/CopyAndPaste";
 import { generateCpf } from "./helpers/generateCpf";
 
+import { motion } from "framer-motion";
+
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -34,7 +36,7 @@ export default function Home() {
   return (
     <div>
       <div className="flex flex-col justify-center items-center gap-12">
-        <TooltipProvider delayDuration={100}>
+        <TooltipProvider delayDuration={0}>
           <Tooltip>
             <TooltipTrigger onClick={copyCpf}>
               <div className="flex gap-6 items-center">
@@ -51,7 +53,9 @@ export default function Home() {
           </Tooltip>
         </TooltipProvider>
 
-        <button
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.1 }}
           onClick={() => {
             const nCpf = generateCpf();
             setCpf(nCpf);
@@ -59,7 +63,7 @@ export default function Home() {
           className="text-xl font-bold bg-orange-700 text-white rounded-lg py-3 px-24"
         >
           Gerar CPF
-        </button>
+        </motion.button>
       </div>
     </div>
   );
