@@ -59,6 +59,7 @@ export default function Home() {
           onClick={() => {
             const nCpf = generateCpf();
             setCpf(nCpf);
+            return setIsCopied(false);
           }}
           className="text-xl font-bold bg-orange-700 text-white rounded-lg py-3 px-24"
         >
