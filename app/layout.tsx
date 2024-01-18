@@ -23,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${roboto.className} w-screen h-screen overflow-x-hidden`}
+        className={`${roboto.className} w-screen h-screen overflow-x-hidden bg-white flex items-center justify-center`}
       >
-        {children}
+        <div className="max-w-[1200px] w-full flex items-center justify-center">
+          {children}
+        </div>
         <Analytics />
       </body>
     </html>
