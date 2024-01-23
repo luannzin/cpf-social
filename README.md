@@ -1,6 +1,6 @@
 <div align="center">
 
-# 📚 CPF Social
+# 💳 CPF Social
 
 CPF Social is a project that generates Brazilian CPF (Cadastro de Pessoas Físicas) numbers. CPF is a unique number that identifies Brazilian citizens and residents, similar to a Social Security Number in the United States. This project is built using NextJS, TailwindCSS, TypeScript and shadcn/ui.
 
