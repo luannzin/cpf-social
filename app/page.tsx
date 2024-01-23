@@ -104,7 +104,7 @@ export default function Home() {
           </SheetTrigger>
           <SheetContent className="bg-white flex flex-col justify-between">
             <div className="flex flex-col gap-16 max-h-[85%]">
-              <strong className="text-orange-700 text-xl">
+              <strong className="text-orange-700 text-xl max-sm:text-base">
                 Gerados recentemente
               </strong>
               <div className="flex flex-col divide-y divide-orange-700/25  overflow-y-scroll overflow-x-hidden pr-4">
@@ -138,9 +138,11 @@ export default function Home() {
                       };
                     }}
                   >
-                    <strong className="text-xl">{cpf.cpf}</strong>
+                    <strong className="text-xl max-sm:text-base">
+                      {cpf.cpf}
+                    </strong>
                     <div className="flex gap-2 items-center">
-                      <span className="text-sm">
+                      <span className="text-sm max-sm:hidden">
                         {formatWaitingTime(new Date(cpf.date))}
                       </span>
                       <CopyAndPaste size={4} isCopied={cpf.isCopied} />
@@ -156,9 +158,9 @@ export default function Home() {
                 setRecentCpfs([]);
                 window.localStorage.removeItem("@CpfSocial:recents");
               }}
-              className="text-base font-bold bg-orange-700 text-white rounded-lg py-3  select-none flex items-center justify-center gap-4"
+              className="text-base max-sm:text-sm font-bold bg-orange-700 text-white rounded-lg py-3 select-none flex items-center justify-center gap-4"
             >
-              <Trash weight="bold" className="size-6" />
+              <Trash weight="bold" className="size-6 max-sm:size-4" />
               <strong className="whitespace-nowrap">Apagar Histórico</strong>
             </motion.button>
           </SheetContent>
@@ -168,12 +170,19 @@ export default function Home() {
         <TooltipProvider delayDuration={0}>
           <Tooltip>
             <TooltipTrigger onClick={copyCpf}>
-              <div className="flex gap-6 items-center">
-                <span className="text-5xl font-bold text-orange-700">
+              <div className="flex gap-6 max-sm:gap-4 items-center">
+                <span className="text-5xl max-sm:text-3xl font-bold text-orange-700">
                   {isPunctuation ? formatCpf(cpf) : cpf}
                 </span>
 
-                <CopyAndPaste isCopied={isCopied} size={8} />
+                <CopyAndPaste
+                  isCopied={isCopied}
+                  size={
+                    typeof window !== "undefined" && window.innerWidth < 640
+                      ? 6
+                      : 8
+                  }
+                />
               </div>
             </TooltipTrigger>
             <TooltipContent className="bg-white text-orange-700">
@@ -190,7 +199,7 @@ export default function Home() {
             setCpf(nCpf);
             return setIsCopied(false);
           }}
-          className="text-xl font-bold bg-orange-700 text-white rounded-lg py-3 px-24 select-none"
+          className="text-xl max-sm:text-base font-bold bg-orange-700 text-white rounded-lg py-3 px-24 max-sm:px-12 select-none"
         >
           Gerar CPF
         </motion.button>
