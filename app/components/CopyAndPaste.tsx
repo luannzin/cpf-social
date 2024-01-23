@@ -35,9 +35,15 @@ export function Check(props: any) {
   );
 }
 
-export const CopyAndPaste = ({ isCopied }: { isCopied: boolean }) => {
+export const CopyAndPaste = ({
+  isCopied,
+  size = 8,
+}: {
+  isCopied: boolean;
+  size: number;
+}) => {
   return (
-    <div className="relative flex items-center justify-center size-8">
+    <div className={`relative flex items-center justify-center size-${size}`}>
       <Clippy
         style={{
           color: "#603500",
@@ -47,7 +53,7 @@ export const CopyAndPaste = ({ isCopied }: { isCopied: boolean }) => {
           strokeDasharray: 50,
           strokeDashoffset: isCopied ? -50 : 0,
         }}
-        className="transition-all duration-300 ease-in-out size-8"
+        className={`transition-all duration-300 ease-in-out size-${size}`}
       />
       <Check
         style={{
@@ -58,7 +64,7 @@ export const CopyAndPaste = ({ isCopied }: { isCopied: boolean }) => {
           strokeDasharray: 50,
           strokeDashoffset: isCopied ? 0 : -50,
         }}
-        className="transition-all duration-300 ease-in-out size-8"
+        className={`transition-all duration-300 ease-in-out size-${size}`}
       />
     </div>
   );
