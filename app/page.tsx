@@ -15,16 +15,9 @@ import { formatWaitingTime } from "./helpers/formatWaitingTime";
 import { motion } from "framer-motion";
 import { CaretDown, Clock, Copy, Trash } from "@phosphor-icons/react";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-
-// import { toast } from "sonner";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Checkbox } from "@/components/ui/checkbox";
+import { formatCpf } from "./helpers/formatCpf";
 
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
@@ -33,7 +26,9 @@ export default function Home() {
   const [recentCpfs, setRecentCpfs] = useState<
     { cpf: string; date: Date; isCopied: boolean }[]
   >([]);
-  const [isAdvanced, setIsAdvanced] = useState<boolean>(false);
+  const [isPunctuation, setIsPunctuation] = useState<boolean>(
+    localStorage.getItem("@CpfSocial:punctuation") === "true" || false
+  );
 
   useEffect(() => {
     setCpf(generateCpf());
@@ -54,7 +49,7 @@ export default function Home() {
   }, [cpf]);
 
   const copyCpf = () => {
-    navigator.clipboard.writeText(cpf);
+    navigator.clipboard.writeText(isPunctuation ? formatCpf(cpf) : cpf);
     setIsCopied(true);
 
     const timeout = setTimeout(() => {
@@ -65,7 +60,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (cpf === "00000000000") return;
+    if (cpf === "00000000000" || cpf === "000.000.000-00") return;
     let recentsLocalStorage: {
       cpf: string;
       date: Date;
@@ -79,7 +74,7 @@ export default function Home() {
     }
 
     recentsLocalStorage.push({
-      cpf,
+      cpf: isPunctuation ? formatCpf(cpf) : cpf,
       date: new Date(),
       isCopied: false,
     });
@@ -91,6 +86,10 @@ export default function Home() {
       JSON.stringify(recentsLocalStorage)
     );
   }, [cpf]);
+
+  useEffect(() => {
+    localStorage.setItem("@CpfSocial:punctuation", String(isPunctuation));
+  }, [isPunctuation]);
 
   return (
     <>
@@ -169,7 +168,7 @@ export default function Home() {
             <TooltipTrigger onClick={copyCpf}>
               <div className="flex gap-6 items-center">
                 <span className="text-5xl font-bold text-orange-700">
-                  {cpf}
+                  {isPunctuation ? formatCpf(cpf) : cpf}
                 </span>
 
                 <CopyAndPaste isCopied={isCopied} size={8} />
@@ -193,7 +192,7 @@ export default function Home() {
         >
           Gerar CPF
         </motion.button>
-        <motion.div
+        {/* <motion.div
           onClick={() => setIsAdvanced(!isAdvanced)}
           className="flex gap-2 text-orange-700 items-center cursor-pointer select-none"
         >
@@ -204,7 +203,15 @@ export default function Home() {
               !isAdvanced ? "rotate-0" : "rotate-180"
             } transition-all duration-300 ease-in-out stroke-orange-700`}
           />
-        </motion.div>
+        </motion.div> */}
+        <div className="flex items-center gap-4">
+          <Checkbox
+            checked={isPunctuation}
+            onCheckedChange={(value: boolean) => setIsPunctuation(value)}
+            className="size-8 rounded-lg border-orange-700 border-4 data-[state=checked]:bg-white !text-orange-700"
+          />
+          <strong className="text-xl text-orange-700">Pontuação</strong>
+        </div>
       </div>
     </>
   );
