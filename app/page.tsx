@@ -27,7 +27,9 @@ export default function Home() {
     { cpf: string; date: Date; isCopied: boolean }[]
   >([]);
   const [isPunctuation, setIsPunctuation] = useState<boolean>(
-    localStorage.getItem("@CpfSocial:punctuation") === "true" || false
+    typeof window !== undefined
+      ? localStorage.getItem("@CpfSocial:punctuation") === "true"
+      : false
   );
 
   useEffect(() => {
