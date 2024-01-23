@@ -43,7 +43,9 @@ export const CopyAndPaste = ({
   size: number;
 }) => {
   return (
-    <div className={`relative flex items-center justify-center size-${size}`}>
+    <div
+      className={`relative flex items-center justify-center size-${size} w-${size} h-${size}`}
+    >
       <Clippy
         style={{
           color: "#603500",

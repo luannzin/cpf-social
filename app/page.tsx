@@ -103,11 +103,11 @@ export default function Home() {
             </div>
           </SheetTrigger>
           <SheetContent className="bg-white flex flex-col justify-between">
-            <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-16 max-h-[85%]">
               <strong className="text-orange-700 text-xl">
                 Gerados recentemente
               </strong>
-              <div className="flex flex-col divide-y divide-orange-700/25">
+              <div className="flex flex-col divide-y divide-orange-700/25  overflow-y-scroll overflow-x-hidden pr-4">
                 {recentCpfs.map((cpf) => (
                   <div
                     key={cpf.cpf + cpf.date}
@@ -206,14 +206,14 @@ export default function Home() {
             } transition-all duration-300 ease-in-out stroke-orange-700`}
           />
         </motion.div> */}
-        <div className="flex items-center gap-4">
+        <label className="flex items-center gap-4 select-none cursor-pointer">
           <Checkbox
             checked={isPunctuation}
             onCheckedChange={(value: boolean) => setIsPunctuation(value)}
             className="size-8 rounded-lg border-orange-700 border-4 data-[state=checked]:bg-white !text-orange-700"
           />
           <strong className="text-xl text-orange-700">Pontuação</strong>
-        </div>
+        </label>
       </div>
     </>
   );
