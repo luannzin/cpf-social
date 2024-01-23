@@ -13,7 +13,7 @@ import { generateCpf } from "./helpers/generateCpf";
 import { formatWaitingTime } from "./helpers/formatWaitingTime";
 
 import { motion } from "framer-motion";
-import { CaretDown, Clock, Copy, Trash } from "@phosphor-icons/react";
+import { Clock, Trash } from "@phosphor-icons/react";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -27,7 +27,7 @@ export default function Home() {
     { cpf: string; date: Date; isCopied: boolean }[]
   >([]);
   const [isPunctuation, setIsPunctuation] = useState<boolean>(
-    typeof window !== undefined
+    typeof localStorage !== "undefined"
       ? localStorage.getItem("@CpfSocial:punctuation") === "true"
       : false
   );
