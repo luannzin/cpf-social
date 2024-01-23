@@ -22,12 +22,7 @@ import { formatCpf } from "./helpers/formatCpf";
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
 
-  const [cpf, setCpf] = useState<string>(
-    typeof localStorage !== "undefined" &&
-      localStorage.getItem("@CpfSocial:punctuation") === "true"
-      ? "000.000.000-00"
-      : "00000000000"
-  );
+  const [cpf, setCpf] = useState<string>("000.000.000-00");
   const [recentCpfs, setRecentCpfs] = useState<
     { cpf: string; date: Date; isCopied: boolean }[]
   >([]);
