@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "@/components/ui/sonner";
 
 import "@/styles/globals.css";
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         <div className="max-w-[1200px] w-full flex items-center justify-center">
           {children}
         </div>
+        {/* <Toaster closeButton /> */}
         <Analytics />
       </body>
     </html>
