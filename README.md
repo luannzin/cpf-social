@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+# 📚 CPF Social
 
-First, run the development server:
+CPF Social is a project that generates Brazilian CPF (Cadastro de Pessoas Físicas) numbers. CPF is a unique number that identifies Brazilian citizens and residents, similar to a Social Security Number in the United States. This project is built using NextJS, TailwindCSS, TypeScript and shadcn/ui.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Feel free to contribute to the project by submitting a pull request or creating an issue.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<div align="center">
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+You can find me on:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<div
+style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;"
+>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[GitHub](https://github.com/luannzin) ﾠ | ﾠ [𝕏/Twitter](https://twitter.com/__luannzin) ﾠ | ﾠ [Instagram](https://instagram.com/__luannzin)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+</div>
