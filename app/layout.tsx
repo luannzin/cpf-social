@@ -25,6 +25,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7591089490291132"
+     crossOrigin="anonymous"></script>
         <link
           rel="shortcut icon"
           href="https://wiki.gelzin.com/api/emoji/%F0%9F%92%B3"
