@@ -99,7 +99,7 @@ export default function Home() {
       <>
         <div className="fixed top-4 right-4">
           <Sheet>
-            <SheetTrigger>
+            <SheetTrigger role="button" name="Abrir Histórico">
               <div className="transition-all hover:bg-orange-700/10 cursor-pointer p-2 rounded-lg">
                 <Clock weight="bold" className="text-orange-700 size-8" />
               </div>
@@ -223,6 +223,8 @@ export default function Home() {
         </motion.div> */}
           <label className="flex items-center gap-4 select-none cursor-pointer">
             <Checkbox
+              role="button"
+              name="Pontuação"
               checked={isPunctuation}
               onCheckedChange={(value: boolean) => setIsPunctuation(value)}
               className="size-8 rounded-lg border-orange-700 border-4 data-[state=checked]:bg-white !text-orange-700"
