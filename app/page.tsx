@@ -160,6 +160,7 @@ export default function Home() {
                   setRecentCpfs([]);
                   window.localStorage.removeItem("@CpfSocial:recents");
                 }}
+                role="button"
                 name="Apagar Histórico"
                 className="text-base max-sm:text-sm font-bold bg-orange-700 text-white rounded-lg py-3 select-none flex items-center justify-center gap-4"
               >
@@ -202,6 +203,7 @@ export default function Home() {
               setCpf(nCpf);
               return setIsCopied(false);
             }}
+            role="button"
             name="Gerar CPF"
             className="text-xl max-sm:text-base font-bold bg-orange-700 text-white rounded-lg py-3 px-24 max-sm:px-12 select-none"
           >
