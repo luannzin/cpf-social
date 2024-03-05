@@ -144,7 +144,7 @@ export default function RootLayout({
       <body
         className={`${roboto.className} w-screen h-screen overflow-x-hidden bg-white flex items-center justify-center`}
       >
-        <div className="max-w-[1200px] w-full flex items-center justify-center">
+        <div className="max-w-[1200px] min-h-screen h-full max-h-screen w-full flex flex-col items-center justify-center">
           {children}
         </div>
         {/* <Toaster closeButton /> */}
