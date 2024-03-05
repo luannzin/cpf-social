@@ -141,11 +141,11 @@ export default function RootLayout({
           media="(prefers-color-scheme: dark)"
         />
 
-        <script
+        {/* <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7591089490291132"
           crossOrigin="anonymous"
-        ></script>
+        ></script> */}
       </head>
       <body
         className={`${roboto.className} w-screen h-screen overflow-x-hidden bg-white flex items-center justify-center`}
