@@ -223,7 +223,7 @@ export default function Home() {
         </motion.div> */}
           <label className="flex items-center gap-4 select-none cursor-pointer">
             <Checkbox
-              role="button"
+              // role="button"
               name="Pontuação"
               checked={isPunctuation}
               onCheckedChange={(value: boolean) => setIsPunctuation(value)}
