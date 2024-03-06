@@ -250,7 +250,7 @@ export default function Home() {
             <u>
               <Link
                 href={
-                  " https://medium.com/@luannzin/the-math-behind-a-brazilian-cpf-d7f340bb7e96"
+                  "https://medium.com/@luannzin/a-matem%C3%A1tica-do-cpf-f5d2066fd8a9"
                 }
                 target="_blank"
               >
