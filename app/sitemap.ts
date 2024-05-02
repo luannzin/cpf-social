@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://cpf.social",
+      url: "https://www.cpf.social/",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,
