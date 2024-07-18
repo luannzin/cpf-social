@@ -14,7 +14,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "CPF Social - Gerador de CPF válido.",
   description:
-    "CPF Social é uma maneira rápida e segura de gerar um número de CPF válido.",
+    "CPF Social é um gerador de CPF válido. Nosso sistema é uma maneira rápida de gerar um cpf real.",
 };
 
 export default function RootLayout({
