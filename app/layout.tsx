@@ -111,11 +111,11 @@ export default function RootLayout({
 
         <meta
           name="og:description"
-          content="CPF Social é uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online oferece uma solução conveniente para suas necessidades."
+          content="CPF Social é um gerador de CPF válido. Nosso sistema é uma maneira rápida de gerar um cpf real."
         />
         <meta
           name="twitter:description"
-          content="CPF Social é uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online oferece uma solução conveniente para suas necessidades."
+          content="CPF Social é um gerador de CPF válido. Nosso sistema é uma maneira rápida de gerar um cpf real."
         />
 
         <meta name="og:email" content="contato@luannzin.com.br" />
