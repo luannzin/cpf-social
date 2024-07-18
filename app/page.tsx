@@ -238,7 +238,11 @@ export default function Home() {
           Made by{" "}
           <strong>
             <u>
-              <Link href={"https://github.com/luannzin"} target="_blank">
+              <Link
+                href={"https://github.com/luannzin"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 luannzin
               </Link>
             </u>
@@ -253,6 +257,7 @@ export default function Home() {
                   "https://medium.com/@luannzin/a-matem%C3%A1tica-do-cpf-f5d2066fd8a9"
                 }
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Medium
               </Link>
