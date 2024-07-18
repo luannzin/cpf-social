@@ -32,7 +32,7 @@ export default function RootLayout({
         ></script>
         <link
           rel="shortcut icon"
-          href="https://wiki.gelzin.com/api/emoji/%F0%9F%92%B3"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💳</text></svg>"
           type="image/x-icon"
         />
 
