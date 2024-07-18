@@ -95,7 +95,7 @@ export default function Home() {
   }, [isPunctuation]);
 
   return (
-    <>
+    <div className="max-w-[1200px] min-h-screen h-full w-full flex flex-col items-center justify-center">
       <>
         <div className="fixed top-4 right-4">
           <Sheet>
@@ -262,9 +262,13 @@ export default function Home() {
                 Medium
               </Link>
             </u>
+            {` / `}
+            <u>
+              <Link href={"/sobre"}>Sobre</Link>
+            </u>
           </strong>
         </span>
       </footer>
-    </>
+    </div>
   );
 }
