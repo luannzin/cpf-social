@@ -14,7 +14,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "CPF Social - Gerador de CPF válido.",
   description:
-    "CPF Social é um gerador de CPF válido. Nosso sistema é uma maneira rápida e eficiente de gerar CPF válido ou gerar CPF real.",
+    "CPF Social é uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online oferece uma solução conveniente para suas necessidades.",
 };
 
 export default function RootLayout({
@@ -111,11 +111,11 @@ export default function RootLayout({
 
         <meta
           name="og:description"
-          content="CPF Social é um gerador de CPF válido. Nosso sistema é uma maneira rápida de gerar um cpf real."
+          content="CPF Social é uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online oferece uma solução conveniente para suas necessidades."
         />
         <meta
           name="twitter:description"
-          content="CPF Social é um gerador de CPF válido. Nosso sistema é uma maneira rápida de gerar um cpf real."
+          content="CPF Social é uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online oferece uma solução conveniente para suas necessidades."
         />
 
         <meta name="og:email" content="contato@luannzin.com.br" />
