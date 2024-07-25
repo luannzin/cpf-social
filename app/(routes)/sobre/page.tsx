@@ -4,7 +4,7 @@ const Page = () => {
   return (
     <main className="flex flex-col gap-4 py-16">
       <u>
-        <Link href={"/"}>Gerar um CPF válido</Link>
+        <Link href={"/"}>Gerador de cpf</Link>
       </u>
       <h1 className="text-2xl text-center">
         <strong>A Matemática do CPF.</strong>
@@ -163,7 +163,7 @@ const Page = () => {
         👈
       </p>
       <u className="mt-16">
-        <Link href={"/"}>Gerar um CPF real</Link>
+        <Link href={"/"}>Gerador de CPF Valido</Link>
       </u>
     </main>
   );

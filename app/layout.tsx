@@ -14,7 +14,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "CPF Social - Gerador de CPF válido.",
   description:
-    "CPF Social é uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online oferece uma solução conveniente para suas necessidades.",
+    "CPF Social é um gerador de cpf. Uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online é um gerador cpf válido.",
 };
 
 export default function RootLayout({
@@ -39,9 +39,9 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="keywords"
-          content="Gerador CPF válido, Como obter CPF grátis, CPF generator online, Gerador CPF válido grátis, Gerador CPF para teste, Como gerar CPF, CPF generator brasileiro"
+          content="gerador cpf valido, gerador de cpf, gerador cpf, gerar cpf, gerador de cpf valido, cpf gerador, cpf valido, gerador de cpf real, gerar cpf válido, cpfs validos"
         />
-        <meta name="subject" content="Gerador de CPF válidos" />
+        <meta name="subject" content="Gerador de cpf valido" />
         <meta name="copyright" content="CPF Social" />
         <meta name="language" content="PT" />
         <meta name="robots" content="index, follow, nocache" />
@@ -49,18 +49,18 @@ export default function RootLayout({
           name="googlebot"
           content="index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"
         />
-        <meta name="revised" content="Terça-feira, 23 de Janeiro de 2024" />
+        <meta name="revised" content="Quinta-feira, 25 de Julho de 2024" />
         <meta
           name="abstract"
-          content="CPF Social é uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online oferece uma solução conveniente para suas necessidades."
+          content="CPF Social é um gerador de cpf. Uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online é um gerador cpf válido."
         />
         <meta
           name="topic"
-          content="CPF Social é uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online oferece uma solução conveniente para suas necessidades."
+          content="CPF Social é um gerador de cpf. Uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online é um gerador cpf válido."
         />
         <meta
           name="summary"
-          content="CPF Social é uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online oferece uma solução conveniente para suas necessidades."
+          content="CPF Social é um gerador de cpf. Uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online é um gerador cpf válido."
         />
 
         <meta name="classification" content="Software" />
@@ -111,11 +111,11 @@ export default function RootLayout({
 
         <meta
           name="og:description"
-          content="CPF Social é uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online oferece uma solução conveniente para suas necessidades."
+          content="CPF Social é um gerador de cpf. Uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online é um gerador cpf válido."
         />
         <meta
           name="twitter:description"
-          content="CPF Social é uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online oferece uma solução conveniente para suas necessidades."
+          content="CPF Social é um gerador de cpf. Uma maneira rápida e segura de gerar um número de CPF válido. Nosso serviço online é um gerador cpf válido."
         />
 
         <meta name="og:email" content="contato@luannzin.com.br" />
