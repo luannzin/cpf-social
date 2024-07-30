@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/sonner";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "@/styles/globals.css";
 
@@ -159,6 +160,7 @@ export default function RootLayout({
         {/* <Toaster closeButton /> */}
         <Analytics />
       </body>
+      <GoogleAnalytics gaId="G-7QD564C5ZT" />
     </html>
   );
 }
